@@ -45,7 +45,7 @@ export const Modal:FC<ModalProps> =({isOpen ,onClose , onSubmit, title , body , 
         }
         secondaryAction()
     },[disaabled , secondaryAction])
-    if(!open){
+    if(!isOpen){
         return null
     }
 
@@ -101,7 +101,9 @@ export const Modal:FC<ModalProps> =({isOpen ,onClose , onSubmit, title , body , 
                     </div>
                     {/**FOOTER */}
                     <div className="flex flex-row items-center gap-4 w-full">
-                        <Button label="Button" onClick={()=>{}}/>
+                        <Button label="Submit" disabled={disaabled} onClick={()=>{}}/>
+                        {/* <Button label="Button" disabled={disaabled} onClick={()=>{}}/> */}
+
                     </div>
 
                  </div>
